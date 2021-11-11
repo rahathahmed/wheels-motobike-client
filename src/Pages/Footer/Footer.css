@@ -1,0 +1,19 @@
+.usefull a{
+     color:#8c8c8c;
+    text-decoration :none;
+}
+.usefull a:hover{
+    color:red; 
+}
+.usefull li i{
+    color:#ec0a0a;
+}
+.contact i{
+    font-size: 30px;
+    margin-right: 10px;
+}
+.social i{
+    font-size: 30px;
+    margin-right: 7px;
+    color: #af2424;
+}

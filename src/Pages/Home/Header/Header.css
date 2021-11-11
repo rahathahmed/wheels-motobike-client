@@ -1,0 +1,8 @@
+.nav-item a{
+    color: rgb(255, 255, 255) !important;
+    
+}
+.nav-item a:hover{
+    border-bottom:2px solid red ;
+    transition: width 4s;
+} 
