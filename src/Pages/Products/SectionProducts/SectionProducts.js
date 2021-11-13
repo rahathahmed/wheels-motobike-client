@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
-const Products = () => {
+const SectionProducts = () => {
      const [products,setProducts] = useState([]);
     
     useEffect(()=> {
@@ -16,7 +16,7 @@ const Products = () => {
             <h2> Products </h2>
             <div className="row g-2">
                 {
-                    products.map(product => <div className="col-md-4"> 
+                    products.slice(0,6).map(product => <div className="col-md-4"> 
                         <div class="card text-center rounded" >
                             <img style={{width:'100%',height:'220px',margin:'auto'}} className="card-img-top" src={product.image} alt="Card image cap"/>
                             <div class="card-body">
@@ -38,4 +38,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default SectionProducts;

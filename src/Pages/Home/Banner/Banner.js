@@ -12,10 +12,10 @@ const Banner = () => {
     }
 // Unfortunatly didn't import css file so i used inline jsx css fot custom design
     return (
-        <div > 
+        <div  > 
             <div  style={bannerBg}>
           
-            <div className="row container text-center py-3 ">
+            <div className="row container text-center mt-5 py-5 ">
                 <div className="col-md-7 text-white text-justify" > 
                         <h4 style={{fontSize: '2.71rem'}}> Introducing </h4>
                         <h1 style={{fontSize: '4.5rem',textShadow: '6px 6px 7.83px rgb(0 0 0 / 18%)'}} > THRILLING 
