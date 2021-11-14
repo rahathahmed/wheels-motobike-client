@@ -14,7 +14,10 @@ const Register = () => {
       
         const newloginProof = {...loginProof};
         newloginProof[field] = value;
+        console.log(newloginProof);
         setloginProof(newloginProof)
+       
+      
         
     }
     const handleEmailPassLogin = e => {
@@ -24,13 +27,12 @@ const Register = () => {
             alert("Not match")
             return
         }
-        createUserEmailandPassword(loginProof.email,loginProof.password);
+        createUserEmailandPassword(loginProof.email,loginProof.password,loginProof.name);
         e.preventDefault();
        
     }
 
   
-    
     return (
         <div>
           <div className="row" >
@@ -40,18 +42,22 @@ const Register = () => {
                {
                    !isLoading &&
                     <form onSubmit={handleEmailPassLogin}>
+                     <div class="form-group mb-3">
+                       <label for="exampleInputPassword1">Name</label>
+                       <input onBlur={handleInputChange} type="text" name="name" class="form-control" id="exampleInputPassword1" placeholder="name"/>
+                   </div>
                    <div class="">
                        <label for="exampleInputEmail1">Email address</label>
-                       <input onChange={handleInputChange} type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter email"/>
+                       <input onBlur={handleInputChange} type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter email"/>
                        
                    </div>
                    <div class="form-group mb-3">
                        <label for="exampleInputPassword1">Password</label>
-                       <input onChange={handleInputChange} type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
+                       <input onBlur={handleInputChange} type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
                    </div>
                    <div class="form-group mb-3">
                        <label for="exampleInputPassword1">Password</label>
-                       <input onChange={handleInputChange} type="password" name="password2" class="form-control" id="exampleInputPassword1" placeholder="Re-Type Your Password"/>
+                       <input onBlur={handleInputChange} type="password" name="password2" class="form-control" id="exampleInputPassword1" placeholder="Re-Type Your Password"/>
                    </div>
                    <button type="submit" class="btn btn-primary">Submit</button>
                  <p> Create a new account ?  <Link to="/register">
